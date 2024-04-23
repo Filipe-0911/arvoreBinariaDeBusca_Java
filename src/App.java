@@ -8,13 +8,15 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         List<Integer> listaNumeros = new ArrayList<>(List.of(89, 66, 43, 51, 16, 55, 11, 79, 77, 82, 32, 100, 90));
-
         Arvore ar = new Arvore(61);
+
+        // List<Integer> listaNumeros = new ArrayList<>(List.of(25, 20, 28, 29, 40, 37, 50));
+        // Arvore ar = new Arvore(30);
 
         for (int numero : listaNumeros) {
             ar.inserir(numero, ar.raiz);
         }
-        int numeroApagar = 90;
+        int numeroApagar = 61;
 
         System.out.println("Percurso em pre-ordem ANTES de deletar %d".formatted(numeroApagar));
         ar.preOrdem(ar.raiz);
@@ -27,8 +29,8 @@ public class App {
         System.out.println();
         System.out.println("---------------");
 
-        System.out.println(ar.noMinimo(ar.raiz));
-        System.out.println(ar.noMaximo(ar.raiz));
+        // System.out.println(ar.noMinimo(ar.raiz.getDir()));
+        // System.out.println(ar.noMaximo(ar.raiz.getEsq()));
 
     }
 }
