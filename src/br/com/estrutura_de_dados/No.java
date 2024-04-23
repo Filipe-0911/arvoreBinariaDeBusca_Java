@@ -13,10 +13,6 @@ public class No {
         this.esq = esq;
     }
 
-    public void setValor(int valor) {
-        this.valor = valor;
-    }
-
     public void setDir(No dir) {
         this.dir = dir;
     }

@@ -107,24 +107,24 @@ public class Arvore {
             }
 
             if (noEncontrado.getDir() != null && noEncontrado.getEsq() != null) {
-                
+
                 if (noPai != null) {
                     if (noPai.getValor() > noEncontrado.getValor()) {
-                        //No pai 43 == 61
+                        // No pai 43 == 61
                         // System.out.println(noPai.getValor());
-                        
-                        //No encontrado == 43 é o que será removido
+
+                        // No encontrado == 43 é o que será removido
                         // System.out.println(noEncontrado.getValor());
-                        
-                        //No substituto do excluido == 32
+
+                        // No substituto do excluido == 32
                         No noSubstituto = noMaximo(noEncontrado.getEsq());
 
                         // muda valor noPai
                         __buscaNo(noSubstituto.getValor(), raiz);
                         noPai.setDir(null);
-                        
+
                         __buscaNo(noEncontrado.getValor(), raiz);
-                        
+
                         No adicionarAoSubstitudoDir = noEncontrado.getDir();
                         No adicionarAoSubstitutoEsq = noEncontrado.getEsq();
 
@@ -134,11 +134,10 @@ public class Arvore {
                         // noPai deve voltar a ser o 61
                         noPai.setEsq(noSubstituto);
 
-
                     } else {
                         No noMaximoEsquerdo = noMaximo(noEncontrado.getEsq());
                         __buscaNo(noMaximoEsquerdo.getValor(), raiz);
-                        
+
                         if (noMaximoEsquerdo.getValor() > noPai.getValor()) {
                             noPai.setDir(null);
                         } else {
@@ -150,23 +149,24 @@ public class Arvore {
 
                         __buscaNo(noEncontrado.getValor(), raiz);
                         noPai.setDir(noMaximoEsquerdo);
-                        
+
                     }
-                    
+
                 } else {
-                    
+
                     No substituto = noMinimo(noEncontrado.getDir());
                     // achar nó pai do substituto
                     __buscaNo(substituto.getValor(), raiz);
 
-                    //seta no esquerdo do pai do substituto o que está a esquerda do substituto
+                    // seta no esquerdo do pai do substituto o que está a esquerda do substituto
                     noPai.setEsq(substituto.getDir());
 
-                    //seta na direita e na esquerda o que estava na direita e na esquerda do substituído
+                    // seta na direita e na esquerda o que estava na direita e na esquerda do
+                    // substituído
                     substituto.setDir(noEncontrado.getDir());
                     substituto.setEsq(noEncontrado.getEsq());
-                    
-                    //muda a referência do início da árvore
+
+                    // muda a referência do início da árvore
                     raiz = substituto;
 
                 }
