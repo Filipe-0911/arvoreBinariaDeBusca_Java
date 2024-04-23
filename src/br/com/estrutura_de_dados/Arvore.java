@@ -78,6 +78,11 @@ public class Arvore {
     public void deletarValor(int valor, No r) {
         No noEncontrado = __buscaNo(valor, r);
 
+        if (noEncontrado == null) {
+            System.out.println("O número informado não está na Árvore de Busca Binária.");
+            return;
+        }
+
         if (noEncontrado.getValor() == valor) {
 
             if (noEncontrado.getDir() == null && noEncontrado.getEsq() == null) {
@@ -217,6 +222,5 @@ public class Arvore {
         }
         return noMaximo;
     }
-
 
 }
