@@ -223,4 +223,15 @@ public class Arvore {
         return noMaximo;
     }
 
+    public void imprimeFolhas(No r) {
+        if (r != null) {
+            if (r.getEsq() == null && r.getDir() == null) {
+                System.out.println(r.getValor());
+            } else {
+                imprimeFolhas(r.getEsq());
+                imprimeFolhas(r.getDir());
+            }
+        }
+    }
+
 }

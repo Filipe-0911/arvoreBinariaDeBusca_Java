@@ -32,5 +32,7 @@ public class App {
         // System.out.println(ar.noMinimo(ar.raiz.getDir()));
         // System.out.println(ar.noMaximo(ar.raiz.getEsq()));
 
+        ar.imprimeFolhas(ar.raiz);
+
     }
 }
