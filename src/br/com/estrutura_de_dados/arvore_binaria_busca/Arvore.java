@@ -1,15 +1,15 @@
-package br.com.estrutura_de_dados;
+package br.com.estrutura_de_dados.arvore_binaria_busca;
 
 public class Arvore {
-    public No raiz;
+    private No raiz;
     private No noPai;
 
     public Arvore(int valor) {
-        raiz = new No(valor);
+        this.raiz = new No(valor);
 
     }
 
-    public No impRaiz() {
+    public No getRaiz() {
         return raiz;
     }
 

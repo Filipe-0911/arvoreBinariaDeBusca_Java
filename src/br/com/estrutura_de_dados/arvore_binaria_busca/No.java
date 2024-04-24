@@ -1,4 +1,4 @@
-package br.com.estrutura_de_dados;
+package br.com.estrutura_de_dados.arvore_binaria_busca;
 
 public class No {
     private int valor;
