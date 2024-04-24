@@ -14,8 +14,6 @@ public class App {
             ar.inserir(numero, ar.getRaiz());
         }
         
-        // List<Integer> listaNumeros = new ArrayList<>(List.of(25, 20, 28, 29, 40, 37, 50));
-        // Arvore ar = new Arvore(30);
         int numeroApagar = 61;
 
         System.out.println("Percurso em pre-ordem ANTES de deletar %d".formatted(numeroApagar));
@@ -46,8 +44,6 @@ public class App {
 
         avl.imprimeNos(avl.getNoRaiz());
         System.out.println();
-
-
 
     }
 }
