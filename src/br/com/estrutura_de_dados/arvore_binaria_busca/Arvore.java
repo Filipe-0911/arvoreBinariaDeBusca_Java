@@ -115,16 +115,8 @@ public class Arvore {
 
                 if (noPai != null) {
                     if (noPai.getValor() > noEncontrado.getValor()) {
-                        // No pai 43 == 61
-                        // System.out.println(noPai.getValor());
-
-                        // No encontrado == 43 é o que será removido
-                        // System.out.println(noEncontrado.getValor());
-
-                        // No substituto do excluido == 32
                         No noSubstituto = noMaximo(noEncontrado.getEsq());
 
-                        // muda valor noPai
                         __buscaNo(noSubstituto.getValor(), raiz);
                         noPai.setDir(null);
 
@@ -136,7 +128,6 @@ public class Arvore {
                         noSubstituto.setEsq(adicionarAoSubstitutoEsq);
                         noSubstituto.setDir(adicionarAoSubstitudoDir);
 
-                        // noPai deve voltar a ser o 61
                         noPai.setEsq(noSubstituto);
 
                     } else {
